@@ -1,5 +1,4 @@
-
-li = [20, 30, 45, 60, 40, 50, 70]
+li = [20, 30, 45, 50, 70, 100, 120]
 
 
 def linear_searching(target: int, list_name: list[int]) -> int:
@@ -13,6 +12,9 @@ def linear_searching(target: int, list_name: list[int]) -> int:
 
 
 while True:
+
+    print("bisect binary Searching")
+
     search_number = input("Masukkan angka yang ingin dicari : ")
 
     try:
