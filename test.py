@@ -49,10 +49,26 @@
 # print(contoh_list)
 # https://wiki.python.org/moin/TimeComplexityaa
 
-import bisect
+def calculate(li, ls, i, u):
 
-li = [1, 3, 5, 7, 9, 12, 12]
+    while ls[i] == li[i]:
+        i += 1
+        if i == n:
+            return -1
 
-bisect.insort(li, 2, 0, 2)
+    while ls[u] == li[u]:
+        u += 1
+        if u == n:
+            return 1
 
-print(li)
+
+li = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ls = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+n = len(li)
+i = 0
+u = 0
+
+aim = calculate(ls, li, i, u)
+
+print(aim)
