@@ -48,6 +48,8 @@ while True:
     if int(result) != -1:
         print(f"Angka yang anda cari ada di index {result}")
         print(f"Dijalankan selama {turn} kali")
+        turn = 0
 
     else:
+        turn = 0
         print("Angka nya tidak ada di index")

@@ -2,7 +2,6 @@ turn = 0
 
 
 def binary_searching(target: int, list_name: list[int], low: int = 0, high: int = 0) -> int:
-
     global turn
     middle = (low + high) / 2
 

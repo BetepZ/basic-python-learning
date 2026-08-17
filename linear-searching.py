@@ -1,19 +1,24 @@
-li = [20, 30, 45, 50, 70, 100, 120]
+turn = 0
 
 
 def linear_searching(target: int, list_name: list[int]) -> int:
     lenght = len(list_name)
 
-    for i in range(lenght):
-        if list_name[i] == target:
-            return int(i)
+    global turn
+
+    for index in range(lenght):
+        if list_name[index] == target:
+            turn = turn + 1
+            return index
 
     return -1
 
 
+li = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
 while True:
 
-    print("bisect binary Searching")
+    print("Linear Searching")
 
     search_number = input("Masukkan angka yang ingin dicari : ")
 
@@ -24,9 +29,10 @@ while True:
         print("masukkin yang bener jir")
         continue
 
-    if int(result) != -1:
-
-        print(f"Angka yang anda cari ada di index {result}")
+    if result == -1:
+        print("angka anda tidak ketemu")
+        turn = 0
 
     else:
-        print("Angka nya tidak ada di index")
+        print(f"angka anda ketemu di index ke {result}")
+        turn = 0
